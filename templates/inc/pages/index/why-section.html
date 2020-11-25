@@ -1,14 +1,16 @@
 {% macro switch_tabs(data) -%}
-    {% for feature in data %}
-        <ul class="kjq-tabs">
-            <li class="kjq-tabs__tab kjq-tabs-tab" data-tab-id="{{ feature.id }}">
-                <p class="kjq-tabs-tab__title">{{ feature.id.capitalize() }}</p>
-                <div class="kjq-tabs-tab__content">
-                    {{ feature.content | safe }}
-                </div>
-            </li>
+    <div class="kjq-tabs kjq-tabs_size_s">
+        <ul class="kjq-tabs__list">
+            {% for feature in data %}
+                <li class="kjq-tabs__tab kjq-tabs-tab" data-tab-id="{{ feature.id }}">
+                    <p class="kjq-tabs-tab__title">{{ feature.id.capitalize() }}</p>
+                    <div class="kjq-tabs-tab__content">
+                        {{ feature.content | safe }}
+                    </div>
+                </li>
+            {% endfor %}
         </ul>
-    {% endfor %}
+    </div>
 {%- endmacro %}
 
 <article class="kto-overview-section kotlin-why-section">

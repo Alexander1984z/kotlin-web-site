@@ -4,6 +4,7 @@
 @import 'static/css/com/_bits/_code';
 @import 'static/css/com/_syntax-highlight/_syntax-highlight_dark';
 @import "static/js/components/-vars-spaces";
+@import "static/js/components/kto-text";
 
 a  {
   color: #7F52FF;
@@ -117,4 +118,40 @@ a.kto-overview-section__title_link:any-link {
   margin: var(--m-space) 0 var(--l-space);
   font-size: 31px;
   line-height: 42px;
+}
+
+.kjq-tabs-tab__tabs {
+  display: flex;
+}
+
+.kjq-tabs-tab__tabs-item {
+  margin-right: var(--s-space);
+  border-bottom: 2px solid rgba(39, 40, 44, 0.2);
+  padding: var(--xs-space) 0;
+  cursor: pointer;
+}
+.kjq-tabs-tab__tabs-item:hover {
+  border-bottom-color: #27282C;
+}
+
+.kjq-tabs-tab__tabs-item_active,
+.kjq-tabs-tab__tabs-item_active:hover {
+  color: #7F52FF;
+  border-color: #7F52FF;
+  cursor: default;
+}
+
+.kjq-tabs-tab__tabs-item:last-of-type {
+  margin-right: 0;
+}
+
+.kjq-tabs_inited .kjq-tabs-tab_inactive {
+  display: none;
+}
+
+.kjq-tabs_size_s > .kjq-tabs-tab__tabs {
+  @include kto-text;
+  @include kto-text_size_s;
+
+  margin-bottom: var(--m-space);
 }
