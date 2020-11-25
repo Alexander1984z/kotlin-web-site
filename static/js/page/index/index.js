@@ -1,6 +1,13 @@
 import $ from 'jquery';
 import './index.scss';
 
+const initJQTabs = function () {
+    const $tabsEl = $('.kjq-tabs');
+    const $tabs = $tabsEl.find('.kjq-tabs-tab');
+    const ids = $tabs.data('tab-id')
+    console.log($tabsEl, $tabs, ids)
+}
+
 const initTabs = function () {
     const $tabs = $('.js-tab');
 
@@ -104,5 +111,6 @@ const initAnchors = function () {
 $(function () {
     initPopups();
     initTabs();
+    initJQTabs();
     initAnchors();
 });

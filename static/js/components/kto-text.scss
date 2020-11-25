@@ -3,25 +3,32 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.kto-text__size_m {
+.kto-text_size_m {
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
 }
 
-.kto-text__size_s {
+.kto-text_size_s {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 }
 
-.kto-text__size_xs {
+.kto-text_size_xs {
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
+}
+
+.kto-text_size_subtitle2 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 40px;
 }
 
 .kto-code {
